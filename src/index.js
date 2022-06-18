@@ -4,7 +4,7 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-// Redux Stuff
+// Redux Imports
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
@@ -18,5 +18,18 @@ const feelingReducer = (state = 0, action) => {
     return state;
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Store
+const storeInstance = createStore(
+    combineReducers({
+        feelingReducer
+    }),
+    applyMiddleware(logger)
+);
+
+// Render
+ReactDOM.render(
+    <Provider store={storeInstance}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
+    registerServiceWorker();
