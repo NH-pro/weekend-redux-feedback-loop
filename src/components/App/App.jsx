@@ -14,11 +14,11 @@ import Comments from '../Comments/Comments';
 import Review from '../../Review/Review';
 
 function App() {
+
   return (
     <div className='App'>
       <Header />
       <Router>
-        <form onSubmit={(event) => submitFeedback(event)}>
           <Route path='/' exact>
             <Feeling />
           </Route>
@@ -38,7 +38,6 @@ function App() {
           <Route path='/review' exaxct>
             <Review />
           </Route>
-        </form>
       </Router>
     </div>
   );
