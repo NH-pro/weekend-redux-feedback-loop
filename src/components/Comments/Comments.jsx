@@ -16,7 +16,7 @@ export default function Comments() {
         <>
             <h2>Any comments you want to leave?</h2>
             <label> Comments
-                <input onChange={dispatchComments} type="text"></input>
+                <input onChange={dispatchComments} type="text" maxLength="25"></input>
             </label>
             <Link to="/review">Next</Link>
         </>
