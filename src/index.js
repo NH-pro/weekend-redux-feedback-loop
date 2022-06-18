@@ -13,7 +13,9 @@ import logger from 'redux-logger';
 const feelingReducer = (state = 0, action) => {
     switch (action.type) {
         case 'SET_FEELING':
-            return action.payload
+            return action.payload;
+        case 'RESET_STATE':
+            return state = 0;
     }
     return state;
 }
@@ -21,7 +23,9 @@ const feelingReducer = (state = 0, action) => {
 const understandingReducer = (state = 0, action) => {
     switch (action.type) {
         case 'SET_UNDER':
-            return action.payload
+            return action.payload;
+        case 'RESET_STATE':
+            return state = 0;
     }
     return state;
 }
@@ -29,7 +33,9 @@ const understandingReducer = (state = 0, action) => {
 const supportReducer = (state = 0, action) => {
     switch (action.type) {
         case 'SET_SUPPORT':
-            return action.payload
+            return action.payload;
+        case 'RESET_STATE':
+            return state = 0;
     }
     return state;
 }
@@ -37,7 +43,9 @@ const supportReducer = (state = 0, action) => {
 const commentsReducer = (state = '', action) => {
     switch (action.type) {
         case 'SET_COMMENTS':
-            return action.payload
+            return action.payload;
+        case 'RESET_STATE':
+            return state = '';
     }
     return state;
 }

@@ -25,6 +25,8 @@ export default function Review() {
             .catch(err => {
                 console.log(`/feedback POST Failed!`, err);
             })
+        
+        alert('Feedback Submitted!');
 
         history.push('/thankYou');
     }
