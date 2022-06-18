@@ -7,7 +7,7 @@ export default function Understanding() {
 
     const dispatchUnder = (event) => {
         dispatch({
-            type: "SET_UNDER",
+            type: 'SET_UNDER',
             payload: event.target.value
         })
     }

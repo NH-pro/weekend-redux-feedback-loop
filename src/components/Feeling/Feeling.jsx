@@ -7,7 +7,7 @@ export default function Feeling() {
 
     const dispatchFeels = (event) => {
         dispatch({
-            type: "SET_FEELS",
+            type: 'SET_FEELS',
             payload: event.target.value
         })
     }
