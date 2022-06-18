@@ -7,8 +7,21 @@ export default function Review() {
     const support = useSelector(storeInstance => storeInstance.supportReducer);
     const comments = useSelector(storeInstance => storeInstance.commentsReducer);
 
+    const feedback = {
+        feelings,
+        understanding,
+        support,
+        comments
+    };
+
     const submitFeedback = () => {
-        axios.post('/feedback')
+        axios.post('/feedback', feedback)
+            .then(() => {
+                console.log(`/feedback POST Success!`)
+            })
+            .catch(err => {
+                console.log(`/feedback POST Failed!`, err);
+            })
     }
 
     return (
