@@ -9,7 +9,7 @@ router.post('/', (req, res) => {
     const feedback = req.body;
     const sqlText = 
         `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
-            VALUES ($1, $2, $3, $4);`;
+        VALUES ($1, $2, $3, $4);`;
     
     pool.query(sqlText,
          [
