@@ -11,9 +11,9 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
+import Review from '../../Review/Review';
 
 function App() {
-
   return (
     <div className='App'>
       <Header />
@@ -33,6 +33,10 @@ function App() {
 
           <Route path='/comments' exaxct>
             <Comments />
+          </Route>
+
+          <Route path='/review' exaxct>
+            <Review />
           </Route>
         </form>
       </Router>
