@@ -18,10 +18,37 @@ const feelingReducer = (state = 0, action) => {
     return state;
 }
 
+const understandingReducer = (state = 0, action) => {
+    switch (action.type) {
+        case 'SET_UNDER':
+            return action.payload
+    }
+    return state;
+}
+
+const supportReducer = (state = 0, action) => {
+    switch (action.type) {
+        case 'SET_SUPPORT':
+            return action.payload
+    }
+    return state;
+}
+
+const commentsReducer = (state = '', action) => {
+    switch (action.type) {
+        case 'SET_COMMENTS':
+            return action.payload
+    }
+    return state;
+}
+
 // Store
 const storeInstance = createStore(
     combineReducers({
-        feelingReducer
+        feelingReducer,
+        understandingReducer,
+        supportReducer,
+        commentsReducer
     }),
     applyMiddleware(logger)
 );
